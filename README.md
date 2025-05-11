@@ -1,2 +1,2 @@
 # calculator_Python
-A simple calculator that i made using Python. 
+A simple calculator made using Python. 
