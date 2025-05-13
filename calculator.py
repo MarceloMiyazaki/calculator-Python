@@ -41,13 +41,13 @@ while True:
 
     
 #calculation structure
-    if len(r) > len(n1) and len(r) > len(n2) and sign != "/":
+    if len(r) > len(n1) and len(r) > len(n2) and sign != "/" and r != "nem vc sabe oq vc quer fazer":
         print(" "*((len(r)-len(n1))-1), n1)
         print(sign, " "*((len(r)-len(n2)-len(sign))), n2, sep='')
         print("-"*(len(r)))
         print(r)
     
-    elif sign != "/":
+    elif sign != "/" and r != "nem vc sabe oq vc quer fazer":
         if len(n2) >= len(n1):
             print(" "*(len(n2)-len(n1)+1),n1 ,sep='')
             print(sign,n2,sep='')
