@@ -58,21 +58,8 @@ while True:
             print(sign," "*(len(n1)-len(n2)-1),n2 ,sep='')
             print("-"*len(n1))
             print(" "*(len(n1)-len(r)),r,sep='')
-        
-    elif sign == "%":
-            if len(r) > len(n1) and len(r) > len(n2):
-                print(" " * ((len(r) - len(n1)) - 1), n1, sep='')
-                print(sign, " " * ((len(r) - len(n2) - 1)), n2, sep='')
-                print("-" * len(r))
-                print(r)
-            else:
-                maior = max(len(n1), len(n2))
-                print(" " * (maior - len(n1) + 1), n1, sep='')
-                print(sign, " " * (maior - len(n2)), n2, sep='')
-                print("-" * (maior + 1))
-                print(" " * (maior - len(r) + 1), r, sep='')
 
-    elif sign == "/":
+    elif sign == "/" and r != "divisão por zero é mals":
         if len(n2) >= len(r):
             print(n1,"|",n2,sep='')
             print("-"*(len(n1)+len(n2)+1))
