@@ -4,11 +4,12 @@ while True:
     n2 = ""
     nums = "0123456789."
     operators = "+-/*%"
-    phase = 0
+    phase = 1
     sign = ""
 
+    #saving the numbers and the sign
     for i in op:
-        if phase == 0:
+        if phase == 1:
             if i in nums:
                 n1 += i
             elif i in operators:
@@ -17,6 +18,7 @@ while True:
         elif i in nums:
                 n2 += i
 
+    #math
     if sign == "+":
         r = str(int(n1) + int(n2))
     elif sign == "-":
@@ -33,10 +35,12 @@ while True:
     else:
         r = "nem vc sabe oq vc quer fazer"
 
-
+    #exotics   
     if r == "divisão por zero é mals" or r == "nem vc sabe oq vc quer fazer":
         print(r)
 
+    
+#calculation structure
     if len(r) > len(n1) and len(r) > len(n2) and sign != "/":
         print(" "*((len(r)-len(n1))-1), n1)
         print(sign, " "*((len(r)-len(n2)-len(sign))), n2, sep='')
@@ -77,3 +81,4 @@ while True:
             print(n1,"|"," "*(len(r)-len(n2)),n2,sep='')
             print("-"*(len(n1)+len(r)+1))
             print(" "*len(n1),"|",r,sep='')
+            
